@@ -1,24 +1,29 @@
 //funzione che prende due numeri, base ed esponente
 const power = (base, exponent) => {
   try {
+    //converto eventuali stringhe contenenti numeri trasformandoli in numeri
     base = Number(base);
     exponent = Number(exponent);
-    if (typeof base !== "number") {
-      throw new Error("base non è in numero")
-    }if (typeof exponent !== "number") {
-        throw new Error("exponent non è un numero")}
-    }else if (typeof exponent !== "number"&& typeof base !== "number" ){
-
+    //controllo se i parametri inseriti sono dei numeri
+    //altrimenti lancio un errore
+    if (isNaN(base) && isNaN(exponent)) {
+      throw new Error("non hai inserito dei numeri validi");
+    } else if (isNaN(base)) {
+      throw new Error("base non è un numero");
+    } else if (isNaN(exponent)) {
+      throw new Error("exponent non è un numero");
     }
+    return Math.pow(base, exponent);
   } catch (error) {
-
+    console.error(error.message);
+    //non vedo l'errore in console per cui
+    //ho stampato l'errore in console.log
+    console.log(error.message);
+    return null;
+  } finally {
+    console.log("operazione completata");
   }
 };
-const result = Math.pow(base, exponent);
 
-const number = power(2, 3);
+const number = power("c", "s");
 console.log(number);
-
-
-console.error("base non è in numero");
-console.error("base non è in numero");
