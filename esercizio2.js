@@ -13,8 +13,6 @@ const concatenaStringhe = (arrayDiStringhe) => {
   if (stringaConcatenata.length > 10) {
     stringaConcatenata = stringaConcatenata.substring(0, 10);
   }
-  console.log(stringaConcatenata);
-
   return stringaConcatenata;
 };
 /* 

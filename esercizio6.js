@@ -25,7 +25,10 @@ const devTeamCopy = JSON.parse(JSON.stringify(devTeam));
 //const { projectName: mobileApp } = devTeamCopy;
 devTeamCopy.mobileApp = devTeamCopy.projectName;
 delete devTeamCopy.projectName;
-
+//ho creato una copia di projectname con nome mobileApp
+//l'ho inserita nell'oggetto  e ho eliminato l'originale
+//
+//
 //Costruisci una funzione che crea e restituisce un oggetto tester a partire dal
 //parametro name (stringa). Durante la creazione dell’oggetto, la funzione
 //dovrebbe anche assegnare un array skills con tre stringhe casuali tra
@@ -60,11 +63,10 @@ const newTester = (stringa) => {
 
 //Usa questa funzione per aggiungere un nuovo tester a devTeamCopy
 devTeamCopy.testers.push(newTester("Veronica"));
-console.log(devTeam);
-console.log(devTeamCopy);
 
 //scrivi quanti oggetti sono stati creati in memoria oltre a quelli
 //iniziali, e giustifica la tua risposta
+//
 //oltre a quelli iniziali sono stati creati altri 5 oggetti,
 //4 di copia dell'oggetto iniziale.
 //1 tester aggiunto all'oggetto copiato

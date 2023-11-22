@@ -13,11 +13,13 @@ const power = (base, exponent) => {
     } else if (isNaN(exponent)) {
       throw new Error("exponent non è un numero");
     }
+    //se non ci sono errori
     return Math.pow(base, exponent);
   } catch (error) {
     console.error(error.message);
-    //non vedo l'errore in console per cui
-    //ho stampato l'errore in console.log
+    //non vedo l'errore in console.error,
+    //forse per le impostazioni del mio browser
+    //quindi ho stampato l'errore in console.log
     console.log(error.message);
     return null;
   } finally {

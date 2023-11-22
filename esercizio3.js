@@ -7,7 +7,7 @@ const book = {
 //aggiungi proprieta rating
 book.rating = 0;
 //aggiungi metodo increaseRating che aumenta fino  a 10
-book.increaserating = (number) => {
+book.increaseRating = (number) => {
   book.rating += number;
   if (book.rating > 10) {
     book.rating = 10;
