@@ -24,6 +24,3 @@ const power = (base, exponent) => {
     console.log("operazione completata");
   }
 };
-
-const number = power("c", "s");
-console.log(number);
